@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <a href="javascript:void(0)" id="button-menu"><img src="./img/menu.png" alt=""></a>
+        <div id="modal" class="modal">
+            <form class="form">
+                <label for="username" class="label">ユーザー名を入力してください（最大8文字）</label>
+                <input type="text" id="username" class="username" minlength="8" required>
+                <div class="group-button">
+                    <a href="javascript:void(0)" id="button-back">戻る</a>
+                    <a href="javascript:void(0)" id="button-decision">決定</a>
+                </div>
+            </form>
+        </div>
+        <div class="comment-box">
+            <div class="comment-control">
+                <a href="javascript:void(0)" id="button-control" class="button-control">
+                    <img id="button-control-img" src="./img/comment_open/btn_close.png" alt="">
+                </a>
+            </div>
+            <div id="comment-box-open" class="comment-box-body comment-box--open">
+                <div class="comment-box-container">
+                    <ul class="list-comment">
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                        <li class="item-comment">
+                            <span class="item-comment-time">20:05</span>
+                            <span class="item-comment-name">ユーザ一名文字</span>
+                            <span class="item-comment-content">メッセージを入力最大16文字</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="comment-box-close" class="comment-box-body comment-box--close">
+                <div class="comment-label">
+                    優里さんへメッセージを送ろう
+                </div>
+                <div class="comment-box-container">
+                    <form id="form-comment" class="comment-form" action="">
+                        <input type="text" name="message" id="message" autocomplete="off" placeholder="メッセージを入力最大16文字">
+                        <a href="javascript:void(0)" class="button-send"
+                            onclick="document.getElementById('form-comment').submit();"><img
+                                src="./img/comment_open/btn_send.png" alt=""></a>
+                    </form>
+                    <p class="msg-error">ご入力いただいたメッセージはご使用いただけません</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
